@@ -1,31 +1,63 @@
-# Hdw Crew
+# LinkedIn Prise de Contact - CrewAI
 
-Welcome to the Hdw Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+Projet de prise de contact automatisée sur LinkedIn utilisant [crewAI](https://crewai.com). Ce système utilise des agents IA collaboratifs pour analyser les profils LinkedIn et générer des messages de prise de contact personnalisés.
 
 ## Installation
 
-Ensure you have Python >=3.10 <3.14 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
+### Prérequis
+- Python >=3.10 <3.14
+- Node.js (pour les outils MCP HDW)
 
-First, if you haven't already, install uv:
+### Installation rapide avec pip
 
+1. Clonez le repository :
+```bash
+git clone https://github.com/Lofp34/linkedin-prise-de-contact.git
+cd linkedin-prise-de-contact
+```
+
+2. Installez les dépendances :
+```bash
+pip install -r requirements.txt
+```
+
+3. Configurez les variables d'environnement :
+```bash
+cp .env.example .env
+# Éditez le fichier .env avec vos clés API
+```
+
+### Installation avec UV (recommandé)
+
+1. Installez UV si ce n'est pas déjà fait :
 ```bash
 pip install uv
 ```
 
-Next, navigate to your project directory and install the dependencies:
+2. Installez les dépendances :
+```bash
+uv pip install -r requirements.txt
+```
 
-(Optional) Lock the dependencies and install them by using the CLI command:
+Ou utilisez la commande CrewAI :
 ```bash
 crewai install
 ```
-### Customizing
 
-**Add your `OPENAI_API_KEY` into the `.env` file**
+### Configuration
 
-- Modify `src/hdw/config/agents.yaml` to define your agents
-- Modify `src/hdw/config/tasks.yaml` to define your tasks
-- Modify `src/hdw/crew.py` to add your own logic, tools and specific args
-- Modify `src/hdw/main.py` to add custom inputs for your agents and tasks
+**Configurez vos clés API dans le fichier `.env` :**
+
+- `OPENAI_API_KEY` : Votre clé API OpenAI (requis)
+- `HDW_ACCESS_TOKEN` : Token d'accès Horizon Data Wave (requis)
+- `HDW_ACCOUNT_ID` : ID de votre compte HDW (requis)
+
+### Personnalisation
+
+- Modifiez `src/hdw/config/agents.yaml` pour définir vos agents
+- Modifiez `src/hdw/config/tasks.yaml` pour définir vos tâches
+- Modifiez `src/hdw/crew.py` pour ajouter votre logique, outils et arguments spécifiques
+- Modifiez `src/hdw/main.py` pour ajouter des entrées personnalisées pour vos agents et tâches
 
 ## Running the Project
 

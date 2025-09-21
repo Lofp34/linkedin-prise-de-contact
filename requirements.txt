@@ -1,0 +1,11 @@
+# Dépendances principales
+crewai[tools]>=0.186.1,<1.0.0
+
+# Dépendances pour les outils MCP
+mcp
+
+# Dépendances pour le développement (optionnel)
+# Décommentez si vous voulez utiliser ces outils
+# pytest>=7.0.0
+# black>=22.0.0
+# flake8>=4.0.0
