@@ -1,0 +1,14 @@
+my_task:
+  description: "Tu utilisesles outils mcp de hdw pour chercher sur linkedin toutes les informations concernant: {prospect}.
+                Tu regroupes toutes les informations de son profil, ses 5 derniers posts et ses 5 derniers commentaires."
+  expected_output: "Réalisation du rapport complet sur: {prospect}"
+  agent: my_agent
+  output_file: "report.md"
+
+Strategie_task:
+  description: "Tu analyses toutes les information du profil linkedin du prospect contenue dansle document report.md .
+                Tu rédiges 5 exemples de message de prise de contact  à destination de ce prospect. 
+                Pour être le plus pertinent possible, tu trouveras des informations sur l'entrepreneur pour qui tu rédiges ces messages ici report_laurent.md"
+  expected_output: "5 exemples de message de prise de contact  pour l'utilisateur: Laurent Serre"
+  agent: my_copywriter
+  output_file: "prise_de_contact.md"
